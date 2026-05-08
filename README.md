@@ -1,2 +1,14 @@
 # petnoti
 애견미용샵 매니징 어플
+https://petnoti.com
+
+# 사용 기술
+백엔드 - Go
+프론트엔드 - ReactNative, Expo
+DB - Mysql
+Storage - BlackBlaze B2
+CDN - CloudFlare CDN
+도메인 구매 - CloudFlare
+장비 - Macmini M4 포트포워딩 해서 ip오픈
+
+
