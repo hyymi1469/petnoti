@@ -35,5 +35,8 @@ https://petnoti.com
   보고 마침 이미지, 동영상을 빠르게 내려줘야 했기 때문에 CDN이 필요했고 CloudeFlare CDN은 무료였기 때문에 데이터 보관비만 내면 됨.
   <img width="808" height="347" alt="스크린샷 2026-05-08 14 21 32" src="https://github.com/user-attachments/assets/d62d1e30-1b43-461c-97c5-c1f2548cfbcb" />
 
+
 - 웹쪽 작업을 많이 해보면 알지만 백앤드나 프론트엔드, DB 를 올릴 장비가 필요한데 AWS, GCP, Azure는 굉장히 비싸다.
 <img width="839" height="349" alt="스크린샷 2026-05-08 14 48 40" src="https://github.com/user-attachments/assets/89c69fe0-d37c-4492-93d4-c176a926683b" />
+  성능대비 가격이 굉장히 비싼데 소규모 프로젝트에 달마다 이 금액을 낼 수는 없어서 고민을 하다가 그냥 집에 직접 장비를 구해서 서비스 하기로 결심하고 이것저것 찾아봄.
+  미니컴퓨터나 자그마한 컴퓨터를 찾는데 반도체 이슈로 인해 성능대비 굉장히 고가가 되어 있었음.
