@@ -17,5 +17,7 @@ https://petnoti.com
 
 * OS - Unix Mac
 
+* AI - ClaudeCode, Codex
 
-
+# Overview
+- 
