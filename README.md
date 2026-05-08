@@ -15,7 +15,7 @@ https://petnoti.com
 
 * 도메인 구매 - CloudFlare
 
-* 장비 - Macmini M4 포트포워딩 해서 ip오픈
+* OS - Unix Mac
 
 
 
