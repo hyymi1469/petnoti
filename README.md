@@ -47,15 +47,8 @@ https://petnoti.com
 <img width="669" height="306" alt="스크린샷 2026-05-08 14 52 44" src="https://github.com/user-attachments/assets/da5d9e8c-9e80-4ce1-9c29-98d205890f6c" />
   이런 저런 정보를 찾고 주위 사람들과 대화한 결과, 요즘 가성비의 애플, 감성의 삼성이란 말을 듣고 생각해보니 맥미니가 성능대비 굉장히 쌌고 심지어 unix기반이라 사실상 linux와 큰 차이가 없어서 맥미니 m4 구매.
 
-- 일반 가정집에서 라이브서버를 올리는 것이기 때문에 백업은 필수라 외장하드를 Mac에 연결하고 매일 03시마다 DB백업하도록 cron(mac에서는 launchd)을 사용하고 오래된 백업파일은 지우도록 함.
- cron/systemd timer
-    ↓
-backup shell script
-    ↓
-mysqldump / pg_dump
-    ↓
-압축
-    ↓
-S3 업로드
-    ↓
-오래된 백업 삭제
+- 일반 가정집에서 라이브서버를 올리는 것이기 때문에 백업은 필수라 외장하드를 Mac에 연결하고 매일 03시마다 DB백업하도록 cron(mac에서는 launchd)을 사용하고 오래된 백업파일은 지우도록 함. 다음과 같은 프로세스 구축.
+  
+ cron/systemd timer  ->  backup shell script  ->  mysqldump  ->  압축  ->  외장하드로 이동  ->  오래된 백업 삭제
+
+- 
