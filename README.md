@@ -117,3 +117,12 @@ https://petnoti.com
   알림톡도 또한 마찬가지인데 외부 알림톡 API는 알림톡 발송이 끝날 때까지 기다리면 사용자 응답이 느려지게 됨. 물론 게임서버처럼 반응이 빨라야 하는 서버는 아니지만
   이왕이면 좋은 서버를 만드는게 목표라 적용.
 
+
+### 프론트엔드 기술 스택
+- 프론트엔드는 Expo와 React Native를 사용해서 Android, iOS, Web을 하나의 코드베이스로 관리.
+- React Navigation으로 화면 이동을 구성했고, AuthContext와 AsyncStorage로 로그인 상태와 선택 매장을 유지.
+- Axios interceptor를 사용해 모든 API 요청에 JWT 토큰과 X-Shop-ID를 자동으로 붙여 중복 코드 줄임.
+
+
+
+
