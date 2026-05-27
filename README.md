@@ -15,7 +15,7 @@ https://petnoti.com
 
 * DB - Mysql
 
-* Storage - BlackBlaze B2
+* Storage - BackBlaze B2
 
 * CDN - CloudFlare CDN
 
