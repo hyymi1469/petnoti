@@ -21,7 +21,7 @@ https://petnoti.com
 
 * 도메인 구매 - CloudFlare
 
-* CloudCompute - Mac mini m4
+* CloudCompute - Mac mini m4(자체 서버)
 
 * AI - ClaudeCode, Codex
 
