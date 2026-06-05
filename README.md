@@ -11,7 +11,7 @@
 # 사용 기술
 * 백엔드 - Go
 
-* 프론트엔드 - ReactNative, Expo, AndroidStudio
+* 프론트엔드 - ReactNative, Expo
 
 * DB - Mysql
 
