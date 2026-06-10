@@ -124,6 +124,13 @@
 - React Navigation으로 화면 이동을 구성했고, AuthContext와 AsyncStorage로 로그인 상태와 선택 매장을 유지.
 - Axios interceptor를 사용해 모든 API 요청에 JWT 토큰과 X-Shop-ID를 자동으로 붙여 중복 코드 줄임.
 
+# 구글 플레이 스토어 등록
+- 스토어에 정식으로 출시하려면 12명의 지인들에게 다운로드를 부탁하고 14일이 지나야 정식 오픈 요청이 가능해서 현재 비공개 테스트로 올리고 12명의 지인들에게 다운로드를 부탁한 상태
+  <img width="1466" height="763" alt="스크린샷 2026-06-10 13 49 16" src="https://github.com/user-attachments/assets/7b32aada-8182-414b-b986-0a7adf578ff2" />
+
+<img width="1791" height="966" alt="스크린샷 2026-06-10 13 50 13" src="https://github.com/user-attachments/assets/c8e42b8e-1509-4946-bad2-9a6def4db8c4" />
+
+https://play.google.com/store/apps/details?id=com.cozyncomfy.petnoti
 
 
 
