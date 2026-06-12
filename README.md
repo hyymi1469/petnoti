@@ -126,15 +126,18 @@
 - Axios interceptor를 사용해 모든 API 요청에 JWT 토큰과 X-Shop-ID를 자동으로 붙여 중복 코드 줄임.
 
 # 모니터링 시스템
+ - "macOS LaunchDaemon(.plist) 기반 모니터링 시스템 개발 및 운영"
+
+   
 <img width="400" height="800" alt="image" src="https://github.com/user-attachments/assets/a963c2ea-6fab-4ac5-9b52-2e256e7648d4" />
 
-<매일 18시마다 현재 장비의 상태를 개인 메일로 보고하도록 Plist 모니터링 시스템 개발해놔서 매일매일 장비의 상태를 볼 수 있음>
+<매일 18시마다 현재 장비의 상태를 개인 메일로 보고하도록 모니터링 시스템 개발해놔서 장비의 상태를 보고받음>
 <br>
 <br>
 
 <img width="400" height="800" alt="image" src="https://github.com/user-attachments/assets/4616fb56-aef0-43bd-a194-84596dfb3d44" />
 
-<CPU가 80%를 넘으면 시간과 상관없이 바로 보고하도록 Plist 시스템을 개발함>
+<CPU가 80%를 넘으면 시간과 상관없이 바로 보고하도록 시스템을 개발함>
 <br>
 <br>
 <img width="400" height="800" alt="image" src="https://github.com/user-attachments/assets/d17de9c6-63e6-4ebd-ba0f-355bd7eac17a" />
