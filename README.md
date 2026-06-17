@@ -157,5 +157,9 @@
 
 <img width="1791" height="966" alt="스크린샷 2026-06-10 13 50 13" src="https://github.com/user-attachments/assets/c8e42b8e-1509-4946-bad2-9a6def4db8c4" />
 
+# 애플 앱스토어 심사 중
+<img width="1393" height="541" alt="스크린샷 2026-06-17 14 25 34" src="https://github.com/user-attachments/assets/74fdc646-07b7-4cab-b45b-fef03b0a4030" />
+
+
 
 
