@@ -3,6 +3,7 @@
 애견미용샵 고객 관리 어플
 - 웹버전 : https://petnoti.com
 - 어플 설명서 : https://guide.petnoti.com/
+- 애플 앱스토어 : https://apps.apple.com/kr/app/펫노티/id6780870798
 
 애견미용샵에서 사장이 가게 매니징을 편하게 하기 위한 목적으로 개발된 어플. 고객 예약, 직원 관리, 스케줄 관리, 알림장, 히스토리 관리, 알림톡, 매출 관리 등 가게 운영에 필수적인 소프트웨어.
 
@@ -156,9 +157,6 @@
   <img width="1466" height="763" alt="스크린샷 2026-06-10 13 49 16" src="https://github.com/user-attachments/assets/7b32aada-8182-414b-b986-0a7adf578ff2" />
 
 <img width="1791" height="966" alt="스크린샷 2026-06-10 13 50 13" src="https://github.com/user-attachments/assets/c8e42b8e-1509-4946-bad2-9a6def4db8c4" />
-
-# 애플 앱스토어 심사 중
-<img width="1393" height="541" alt="스크린샷 2026-06-17 14 25 34" src="https://github.com/user-attachments/assets/74fdc646-07b7-4cab-b45b-fef03b0a4030" />
 
 
 
