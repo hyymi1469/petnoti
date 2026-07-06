@@ -150,7 +150,7 @@
 
 
 # 실행 모습
-<img width="540" height="800" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
   
   - 미용 스케줄이 잡힌 모습
 
