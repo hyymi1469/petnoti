@@ -1,6 +1,7 @@
 ## 해당 프로젝트는 상용으로 사용 중인 소프트웨어라 코드를 공개할 수 없습니다.
 # petnoti
 애견미용샵 고객 관리 어플
+- 테스트 계정 : ID:test@test.com //password:test123456
 - 웹버전 : https://petnoti.com
 - 어플 설명서 : https://guide.petnoti.com/
 - 애플 앱스토어(정식 출시) : https://apps.apple.com/kr/app/펫노티/id6780870798
