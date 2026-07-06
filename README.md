@@ -120,32 +120,6 @@
   알림톡도 또한 마찬가지인데 외부 알림톡 API는 알림톡 발송이 끝날 때까지 기다리면 사용자 응답이 느려지게 됨. 물론 게임서버처럼 반응이 빨라야 하는 서버는
   아니지만 이왕이면 좋은 서버를 만드는게 목표라 적용.
 
-
-  <img width="540" height="1150" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
-  
-  - 미용 스케줄이 잡힌 모습
-
-
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/709e8f0b-605e-4c1a-9827-232106c95eb4" />
-
-- 고객 추가/삭제/수정을 할 수 있는 고객관리 탭.
-
-
-
-<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-40-12" src="https://github.com/user-attachments/assets/94abf53e-10c9-40c1-aedf-df4c897f323f" />
-<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-38-40 002" src="https://github.com/user-attachments/assets/86db97c4-a920-4245-ba08-e5da2d7a544b" />
-<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-38-40 001" src="https://github.com/user-attachments/assets/5bc8e10f-ad22-493f-9f4a-c8a70cf1d3fa" />
-
-
--고객관리탭에서 고객에게 버튼 하나로 전화, 문자로 이어지게 하고 강아지의 몸무게 히스토리, 상처 변화를 메모를 DB에 저장하여 한 눈에 보기 편하게 함
-
-
-
-
-
-
-
-
 ### 프론트엔드 기술 스택
 - 프론트엔드는 Expo와 React Native를 사용해서 Android, iOS, Web을 하나의 코드베이스로 관리.
 - React Navigation으로 화면 이동을 구성했고, AuthContext와 AsyncStorage로 로그인 상태와 선택 매장을 유지.
@@ -174,6 +148,35 @@
 <br>
 
 
+# 실행 모습
+<img width="540" height="1150" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
+  
+  - 미용 스케줄이 잡힌 모습
+
+
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/709e8f0b-605e-4c1a-9827-232106c95eb4" />
+
+- 고객 추가/삭제/수정을 할 수 있는 고객관리 탭.
+
+
+
+<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-40-12" src="https://github.com/user-attachments/assets/94abf53e-10c9-40c1-aedf-df4c897f323f" />
+<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-38-40 002" src="https://github.com/user-attachments/assets/86db97c4-a920-4245-ba08-e5da2d7a544b" />
+<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-38-40 001" src="https://github.com/user-attachments/assets/5bc8e10f-ad22-493f-9f4a-c8a70cf1d3fa" />
+
+
+-고객관리탭에서 고객에게 버튼 하나로 전화, 문자로 이어지게 하고 강아지의 몸무게 히스토리, 상처 변화를 메모를 DB에 저장하여 한 눈에 보기 편하게 함
+
+
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/9ec0f7a7-0663-45eb-b800-aa77783be7de" />
+
+- 예약을 잡으면 고객에게 알림톡을 보낼 지 말지 여부를 선택할 수 있음. 이뿐만 아니라 리마인드 알림, 동의서, 알림장 등을 고객에게 직접 카카오톡으로 보냄
+
+
+<img width="340" height="800" alt="KakaoTalk_Snapshot_20260706_133200" src="https://github.com/user-attachments/assets/f4396440-9490-40c2-8cbd-ebb94c0ef018" />
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/991b46d0-ca0c-4c10-9ec1-766e41eca277" />
+
+- 실제 고객이 받는 카카오 알림톡. 전자서명까지 가능하도록 구현하여 동의서를 온라인으로 주고받을 수 있도록 설계. 해당 사인은 이미지화하여 backblaze R2 저장소에 남김
 
 
 
