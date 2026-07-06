@@ -121,16 +121,16 @@
   아니지만 이왕이면 좋은 서버를 만드는게 목표라 적용.
 
 
-  <img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
+  <img width="540" height="1150" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
   - 미용 스케줄이 잡힌 모습
 
 
-<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/709e8f0b-605e-4c1a-9827-232106c95eb4" />
+<img width="540" height="1150" alt="image" src="https://github.com/user-attachments/assets/709e8f0b-605e-4c1a-9827-232106c95eb4" />
 - 고객 추가/삭제/수정을 할 수 있는 고객관리 탭.
 
-<img width="1080" height="2340" alt="KakaoTalk_Photo_2026-07-06-13-40-12" src="https://github.com/user-attachments/assets/94abf53e-10c9-40c1-aedf-df4c897f323f" />
-<img width="1080" height="2340" alt="KakaoTalk_Photo_2026-07-06-13-38-40 002" src="https://github.com/user-attachments/assets/86db97c4-a920-4245-ba08-e5da2d7a544b" />
-<img width="1080" height="2340" alt="KakaoTalk_Photo_2026-07-06-13-38-40 001" src="https://github.com/user-attachments/assets/5bc8e10f-ad22-493f-9f4a-c8a70cf1d3fa" />
+<img width="540" height="1150" alt="KakaoTalk_Photo_2026-07-06-13-40-12" src="https://github.com/user-attachments/assets/94abf53e-10c9-40c1-aedf-df4c897f323f" />
+<img width="540" height="1150" alt="KakaoTalk_Photo_2026-07-06-13-38-40 002" src="https://github.com/user-attachments/assets/86db97c4-a920-4245-ba08-e5da2d7a544b" />
+<img width="540" height="1150" alt="KakaoTalk_Photo_2026-07-06-13-38-40 001" src="https://github.com/user-attachments/assets/5bc8e10f-ad22-493f-9f4a-c8a70cf1d3fa" />
 -고객관리탭에서 고객에게 버튼 하나로 전화, 문자로 이어지게 하고 강아지의 몸무게 히스토리, 상처 변화를 메모를 DB에 저장하여 한 눈에 보기 편하게 함
 
 
