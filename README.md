@@ -186,6 +186,7 @@
 
 <img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/67d596ea-88ad-449d-82cf-ad390d440a6f" />
 <img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/ff6328b5-abe2-461e-8e84-46277a0eaa81" />
+
 - 미용이 끝나면 고객에게 알림장을 보내는 기능을 넣음. 고객에게 사진 및 동영상을 첨부해서 보낼 수 있고 고객에겐 카카오톡 알림톡으로 전송됨
 
 
