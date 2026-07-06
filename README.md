@@ -192,7 +192,7 @@
 
 <img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/6aaa39c6-1da8-42cc-853e-e9709832b625" />
 
--실제 고객이 받아서 보는 알림장의 모습.고객에게 html코드를 보내주어서 디자인을 구현함 
+- 실제 고객이 받아서 보는 알림장의 모습.고객에게 html코드를 보내주어서 디자인을 구현함 
 
 
 
