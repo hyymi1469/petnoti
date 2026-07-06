@@ -149,7 +149,7 @@
 
 
 # 실행 모습
-<img width="540" height="1150" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
+<img width="540" height="800" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
   
   - 미용 스케줄이 잡힌 모습
 
@@ -173,7 +173,7 @@
 - 예약을 잡으면 고객에게 알림톡을 보낼 지 말지 여부를 선택할 수 있음. 이뿐만 아니라 리마인드 알림, 동의서, 알림장 등을 고객에게 직접 카카오톡으로 보냄
 
 
-<img width="340" height="800" alt="KakaoTalk_Snapshot_20260706_133200" src="https://github.com/user-attachments/assets/f4396440-9490-40c2-8cbd-ebb94c0ef018" />
+<img width="500" height="800" alt="KakaoTalk_Snapshot_20260706_133200" src="https://github.com/user-attachments/assets/f4396440-9490-40c2-8cbd-ebb94c0ef018" />
 <img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/991b46d0-ca0c-4c10-9ec1-766e41eca277" />
 
 - 실제 고객이 받는 카카오 알림톡. 전자서명까지 가능하도록 구현하여 동의서를 온라인으로 주고받을 수 있도록 설계. 해당 사인은 이미지화하여 backblaze R2 저장소에 남김
