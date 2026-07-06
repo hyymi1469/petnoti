@@ -180,12 +180,20 @@
 - 실제 고객이 받는 카카오 알림톡. 전자서명까지 가능하도록 구현하여 동의서를 온라인으로 주고받을 수 있도록 설계. 해당 사인은 이미지화하여 backblaze R2 저장소에 남김
 
 
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/d064c226-75b3-4213-97ea-bff349a82d50" />
 
-# 구글 플레이 스토어 정식 등록 전  비공개테스트 등록
-- 스토어에 정식으로 출시하려면 12명의 지인들에게 다운로드를 부탁하고 14일이 지나야 정식 오픈 요청이 가능해서 현재 비공개 테스트로 올리고 12명의 지인들에게 다운로드를 부탁한 상태
-  <img width="1466" height="763" alt="스크린샷 2026-06-10 13 49 16" src="https://github.com/user-attachments/assets/7b32aada-8182-414b-b986-0a7adf578ff2" />
+- DB에 나의 직원들과 나의 매출을 합산하여 가계부를 볼 수 있도록 구현
 
-<img width="1791" height="966" alt="스크린샷 2026-06-10 13 50 13" src="https://github.com/user-attachments/assets/c8e42b8e-1509-4946-bad2-9a6def4db8c4" />
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/67d596ea-88ad-449d-82cf-ad390d440a6f" />
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/ff6328b5-abe2-461e-8e84-46277a0eaa81" />
+- 미용이 끝나면 고객에게 알림장을 보내는 기능을 넣음. 고객에게 사진 및 동영상을 첨부해서 보낼 수 있고 고객에겐 카카오톡 알림톡으로 전송됨
+
+
+<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/6aaa39c6-1da8-42cc-853e-e9709832b625" />
+
+-실제 고객이 받아서 보는 알림장의 모습.고객에게 html코드를 보내주어서 디자인을 구현함 
+
+
 
 
 
