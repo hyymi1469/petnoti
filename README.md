@@ -1,202 +1,125 @@
-## 해당 프로젝트는 상용으로 사용 중인 소프트웨어라 코드를 공개할 수 없습니다.
-# petnoti
-애견미용샵 고객 관리 어플
-- 테스트 계정 : ID:test@test.com //password:test123456
-- 웹버전 : https://petnoti.com
-- 어플 설명서 : https://guide.petnoti.com/
-- 애플 앱스토어(정식 출시) : https://apps.apple.com/kr/app/펫노티/id6780870798
-- 구글 플레이 스토어(정식 출시) : https://play.google.com/store/apps/details?id=com.cozyncomfy.petnoti&pcampaignid=web_share
+<div align="center">
+  <img src="./assets/logo.png" width="120" alt="펫노티 로고" />
+  <h1>펫노티 (Petnoti)</h1>
+  <p><strong>예약부터 고객 알림장, 호텔, 매출까지 한곳에서 관리하는 반려동물 미용실 운영 서비스</strong></p>
+  <p>
+    <a href="https://petnoti.com">웹에서 체험하기</a> ·
+    <a href="https://apps.apple.com/kr/app/펫노티/id6780870798">App Store</a> ·
+    <a href="https://play.google.com/store/apps/details?id=com.cozyncomfy.petnoti">Google Play</a> ·
+    <a href="https://guide.petnoti.com">사용 설명서</a>
+  </p>
+</div>
 
-애견미용샵에서 사장이 가게 매니징을 편하게 하기 위한 목적으로 개발된 어플. 고객 예약, 직원 관리, 스케줄 관리, 알림장, 히스토리 관리, 알림톡, 매출 관리 등 가게 운영에 필수적인 소프트웨어.
+> 현재 iOS, Android, Web에서 실제 운영 중인 상용 서비스입니다. 서비스 소스 코드는 비공개이며, 이 저장소에는 프로젝트 소개와 실행 화면을 담았습니다.
 
-# 개발 인원
-* 혼자
+## 프로젝트 소개
 
-# 사용 기술
-* 백엔드 - Go
+기존 미용실 관리 도구의 높은 비용과 불편한 사용 흐름을 개선하기 위해 시작했습니다. 실제 애견미용실 운영자의 피드백을 받아 예약, 고객·반려동물 기록, 카카오 알림톡, 전자 동의서, 사진·동영상 알림장, 호텔, 매출 관리를 하나의 서비스로 구현했습니다.
 
-* 프론트엔드 - ReactNative, Expo
+- 개발 형태: 1인 기획·디자인·풀스택 개발·배포·운영
+- 지원 환경: iOS / Android / PC·모바일 Web
+- 운영 형태: 멤버십 기반 상용 서비스
+- 테스트 계정: `test@test.com` / `test123456`
 
-* DB - Mysql
+## 주요 화면
 
-* Storage - BackBlaze B2
+### 예약과 스케줄
 
-* CDN - CloudFlare CDN
+월간·주간·일간 스케줄을 지원하며, 담당 미용사별 예약과 휴무를 한눈에 확인할 수 있습니다. 예약 등록 시 고객과 반려동물, 서비스 시간, 담당자, 알림톡 발송 여부를 함께 관리합니다.
 
-* 도메인 구매 - CloudFlare
+<p align="center">
+  <img src="./assets/schedule-month.png" width="31%" alt="월간 예약 스케줄" />
+  <img src="./assets/schedule-week.png" width="31%" alt="주간 예약 스케줄" />
+  <img src="./assets/reservation-create.png" width="31%" alt="예약 등록 화면" />
+</p>
 
-* CloudCompute - Mac mini m4(자체 서버)
-  
-* AI - ClaudeCode, Codex
+### 고객 커뮤니케이션
 
-* 카카오 알림톡 보내기(고객에게 예약 확정/취소/변경, 미용알림 등) - NaverCloudPlatform
+미용 전자 동의서를 받고, 작업이 끝나면 사진·동영상과 코멘트가 포함된 알림장을 카카오 알림톡으로 전달합니다. 고객은 앱 설치 없이 웹 링크에서 결과를 확인할 수 있습니다.
 
+<p align="center">
+  <img src="./assets/consent.png" width="31%" alt="전자 동의서 서명" />
+  <img src="./assets/gallery.png" width="31%" alt="사진과 동영상 갤러리" />
+  <img src="./assets/customer-report.png" width="31%" alt="고객용 미용 알림장" />
+</p>
 
-# 개발 환경 구축과 선택 이유
-- 시중에 나와 있는 애견미용샵 어플들은 비싸고 불편한 점이 많아 애견미용샵을 운영 중인 지인에게 직접 피드백을 받으며 상용화 목적으로 개발.
+### 매장 운영
 
-- 개인적으로 익숙한 언어기도 하고 고루틴이라는 경량화 스레드가 있고 어느 os든 포팅이 간편하다는 점에서 go언어를 선택함.
-  
-- 프론트엔드는 웹, 앱이 모두 작동해야 한다고 하여 ReactNative로 선택.
-  
-- 해당 어플은 미용사들이 강아지들의 사진, 동영상을 저장하고 고객에게 보여줘야 하기 때문에 저장소가 무조건 필요.
-  저장소는 원래 CloudFlare R2를 사용하려 했으나 생각보다 비싼 보관 비용 때문에 찾아보다가 BackBlaze B2라는 보관비용이 싼 곳을 발견.
-  하지만 B2는 트래픽(다운로드, 업로드)가 유료여서 고민하던 찰나 "Backblaze B2 → Cloudflare 구간의 트래픽 비용(egress)”을 면제해주는 제휴가 되어 있다는 걸
-  보고 마침 이미지, 동영상을 빠르게 내려줘야 했기 때문에 CDN이 필요했고 CloudeFlare CDN은 무료였기 때문에 데이터 보관비만 내면 됨.
-  <img width="808" height="347" alt="스크린샷 2026-05-08 14 21 32" src="https://github.com/user-attachments/assets/d62d1e30-1b43-461c-97c5-c1f2548cfbcb" />
+매출 달력과 가계부, 알림장 템플릿, 직원 권한, 선불금·쿠폰, 호텔 숙박을 관리합니다. 매장 규모와 호텔 사용 여부에 따라 멤버십 요금이 계산됩니다.
 
+<p align="center">
+  <img src="./assets/sales.png" width="31%" alt="매출 관리" />
+  <img src="./assets/report-template.png" width="31%" alt="알림장 템플릿" />
+  <img src="./assets/live-membership.png" width="31%" alt="멤버십 관리" />
+</p>
 
-- 서버 개발자로 살아오다보면 서버를 구축할 일이 많은데 백앤드나 프론트엔드, DB를 올릴 장비가 필요한데 AWS, GCP, Azure는 굉장히 비싸다. 국내 클라우드 업체를 봐도 비슷한 가격대이거나 조금 싼 정도.
-<img width="839" height="349" alt="스크린샷 2026-05-08 14 48 40" src="https://github.com/user-attachments/assets/89c69fe0-d37c-4492-93d4-c176a926683b" />
+## 핵심 기능
 
-- 그나마 싼 NaverCloudPlatform 도 보면 CPU 4core, RAM 4G, 50GB Storage(HDD) 인데도 한 달에 7만5천원이었다. 여기다가 추가 스토리지 붙이고 트래픽 비용까지 별도로 나가고 부가세 별도니까
-  한 달에 10만원은 기본이었다. 이 금액을 매 달 낼 수는 없어서 고민을 하다가 그냥 집에서 직접 장비를 구해서 서비스 하기로 결심하고 이것저것 찾아보았다. 게임처럼 즉각적인 반응이 필수인 것도 아니고 정전이 일어나도
-  금방 복구가 될테니 DB백업만 잘 하면 된다고 생각했다.
+| 영역 | 기능 |
+|---|---|
+| 예약·스케줄 | 월간·주간·일간 보기, 담당자별 예약, 예약 중복 검사, 휴무·영업시간 관리 |
+| 고객·반려동물 | 다중 연락처, 미용 이력, 체중·특이사항 기록, 선불금·쿠폰, 미디어 갤러리 |
+| 고객 소통 | 예약 확정·변경·취소·리마인드 알림톡, 미용주기 알림, 전자 동의서, 사진·동영상 알림장 |
+| 호텔 | 객실·수용량, 체크인·체크아웃, 숙박·시간 요금, 돌봄 기록, 매출 연동 |
+| 매장 관리 | 직원 초대와 세부 권한, 담당자별 매출·인센티브, 가계부, 멤버십 정기결제 |
 
+## 시스템 구성
 
-- 하지만 미니컴퓨터나 자그마한 컴퓨터를 찾는데 반도체 이슈로 인해 성능대비 굉장히 고가가 되어 있었다.
-<img width="669" height="306" alt="스크린샷 2026-05-08 14 52 44" src="https://github.com/user-attachments/assets/da5d9e8c-9e80-4ce1-9c29-98d205890f6c" />
-  <불과 1년 전만 해도 30~40만원 이었던 장비가 동일 사양 67만원이 된 미니컴퓨터 장비들>
+```mermaid
+flowchart LR
+    Client[React Native + Expo<br/>iOS · Android · Web] -->|JWT REST API| API[Go + Gin]
+    API --> DB[(MySQL)]
+    Client -->|Presigned URL 직접 업로드| B2[Backblaze B2]
+    B2 --> CDN[Cloudflare CDN]
+    API --> NCP[Naver Cloud<br/>카카오 알림톡]
+    API --> Pay[NICEPAY<br/>멤버십 정기결제]
+    API --> Push[Expo Push]
+```
 
+## 기술적 구현
 
-- 이런 사정 때문에 주위에 하소연을 했더니 엔지니어인 친구가 요즘 가성비의 애플, 감성의 삼성이라고, 애플 제품을 찾아보라 조언을 해 줌.
+### 하나의 코드베이스로 세 플랫폼 지원
 
-- 24시간 켜져 있어야 하니 전기도 적게 먹어야 하고 성능은 어느정도 받쳐주면서 가정집이니 조용해야 하고 리눅스를 깔 수 있는 장비. 생각해보니 맥미니가 이 모든 조건에 부합하였고
-  unix기반이라 사실상 linux와 큰 차이가 없어서 맥미니 m4 구매.
+React Native와 Expo로 iOS, Android, Web을 함께 개발했습니다. React Navigation으로 화면 흐름을 구성하고, Axios interceptor에서 JWT와 선택 매장 정보를 모든 API 요청에 일관되게 적용했습니다. 모바일 우선 반응형 UI와 웹의 마우스 상호작용을 함께 지원합니다.
 
-- 맥미니를 서버에 최적화된 기기로 만들기 위해 자동 업데이트 금지, 꺼지지 않음 설정, 서버 죽거나 장비 재시작 시 자동으로 서버 올리도록 설정, ssh 접속 허용 등 여러가지 설정 필수.
+### 대용량 미디어 업로드 구조
 
-- 일반 가정집에서 라이브서버를 올리는 것이기 때문에 백업은 필수라 외장하드를 Mac에 연결하고 매일 03시마다 DB백업하도록 cron(mac에서는 launchd)을 사용하고 오래된 백업파일은 지우도록 함. 다음과 같은 프로세스 구축.
-- 이것만으로도 불안하여 DB백업 파일을 압축하여 클라우드 저장소인 B2에도 저장하고 최대 1달동안 보관하도록 함.
-     cron/systemd timer  ->  backup shell script  ->  mysqldump  ->  압축  ->  외장하드, B2 클라우드 저장소로 이동  ->  오래된 백업 삭제
+서버가 업로드용 presigned URL을 발급하고 클라이언트가 Backblaze B2로 직접 전송합니다. 이미지와 동영상은 업로드 전에 앱의 정책에 맞게 리사이즈·압축해 저장 비용과 전송량을 줄였으며, 조회 트래픽은 Cloudflare CDN을 통해 전달합니다.
 
-- 그리고 일반 가정집은 유동아이피라 DDNS 설정을 해 주어야 한다. DDNS란 아이피가 바뀌면 도메인을 기준으로 다시 매칭시켜주는건데 이걸 CloudFlare에서 도메인을 사면 "CloudFlare 터널" 이라고 해서 따로 DDNS설정을
-  안해줘도 된다. 대신 터널 설정을 해 주어야 한다.
+### 데이터 무결성과 권한 보호
 
-- 보안을 위해 인증서를 가진 사람만 원격으로 라이브 서버에 접속할 수 있도록 함.
-- 확실히 클라우드 컴퓨팅을 대여하는게 아니다보니 신경써야 할 부분이 굉장히 많고 할 것도 많았지만 비용은 다음과 같이 아낄 수 있다.
-- 맥미니m4와 동일한 성능의 클라우드컴퓨터를 빌린다고 가정했을 경우 비용은 다음과 같다.
-  <img width="814" height="530" alt="스크린샷 2026-05-08 16 33 42" src="https://github.com/user-attachments/assets/e8ef3f5b-fd21-4706-89da-4c8551e19997" />
-  사실상 Macmini 구매 비용 처음 빼고는 한 달 동안 계속 켜 놓는다고 해도 전기세 1400원 정도가 끝이라 비용 부담 적음.
-  회사에서는 늘 aws, azure, GCP에서 클라우드 컴퓨팅 빌려다가 편하게 서비스만 해봤지, 처음부터 그것도 고정아이피도 없는 가정집에서 서비스하려면 굉장히 챙겨야 할 것들이 많았다.
-  불편 != 비용 이라는 공식을 다시금 깨닫는 계기가 됨.
+여러 데이터를 한 번에 저장하는 기능은 단일 API와 DB 트랜잭션으로 처리해 부분 저장을 방지했습니다. 직원 권한은 화면 노출뿐 아니라 서버에서도 다시 검증하며, 권한이 없을 때 다른 값으로 조용히 대체하지 않고 명확한 오류를 반환합니다.
 
+### 비동기 작업과 자동화
 
-# 기능 및 기술 설명
-### 서버 기술 스택
-  - 언어: Go
-    
-  - 웹 프레임워크: Gin. REST API 라우팅, 미들웨어, JSON 응답 처리에 사용
-    
-  - DB: MySQL. 데이터들을 보관
-    
-  - 인증: JWT. 로그인 후 토큰을 받아서 보호된 API 요청마다 검증
-    
-  - CORS: gin-contrib/cors. 프론트엔드에서 서버 API를 호출할 수 있게 허용 origin과 header를 설정
-    
-  - 파일 저장소: AWS S3 SDK를 사용해서 Backblaze B2에 업로드.
-    동영상 및 이미지를 업로드할 경우, 서버는 presigned URL을 프론트에게 주고 프론트는 해당 url로 이미지, 동영상을 업로드하는 방식.
-    흐름 : 강아지 미용 사진, 동영상을 올린다고 서버에 보고 -> 서버는 저장소의 url을 프론트에게 알려줌 -> 프론트엔드가 해당 url로 직접 업로드함
-    
+Go goroutine 기반 스케줄러가 예약 상태 변경, 예약 리마인드, 미용주기 안내, 오래된 미디어 정리 등을 수행합니다. 외부 메시지 발송과 결과 조회도 비동기로 처리해 API 응답 지연을 줄였습니다.
 
-  #### 고루틴 사용 위치
-  고루틴은 크게 두 종류로 쓰입니다.
+### 직접 구축한 운영 환경
 
-  1. 백그라운드 스케줄러
+Mac mini M4에 API, 웹, DB를 운영하고 Cloudflare Tunnel로 외부에 안전하게 연결했습니다. `launchd`로 프로세스 자동 복구와 상태 모니터링을 구성했으며, 매일 MySQL 백업을 압축해 로컬 외장 저장소와 Backblaze B2에 이중 보관합니다.
 
-  - 자정마다 지난 예약을 completed로 변경
-  - 매일 13시에 예약 리마인드 알림톡 발송
-  - 매일 10시에 미용주기 알림톡 발송
-  - 매일 03시에 오래된 알림장 미디어 정리
-  - 1분마다 예약 발송 상태의 알림장을 sent로 변경
-
-  2. 알림톡 비동기 발송
-
-  - 예약 알림톡 발송을 별도 고루틴으로 처리
-  - 알림톡 발송 수락 후 delivery 상태 조회도 별도 고루틴으로 처리
-
-  - 고루틴을 쓴 이유는 서버가 API 요청을 처리하면서 동시에 백그라운드 작업도 해야 하기 때문.
-    예를 들어 자정 예약 상태 변경이나 매일 알림톡 발송은 사용자가 API를 호출하지 않아도 서버가 자동으로 해야 하는 작업. 이걸 메인 흐름에서 실행하면 서버
-    시작이나 HTTP 요청 처리가 막힐 수 있으므로, 고루틴으로 따로 실행
-
-  알림톡도 또한 마찬가지인데 외부 알림톡 API는 알림톡 발송이 끝날 때까지 기다리면 사용자 응답이 느려지게 됨. 물론 게임서버처럼 반응이 빨라야 하는 서버는
-  아니지만 이왕이면 좋은 서버를 만드는게 목표라 적용.
-
-### 프론트엔드 기술 스택
-- 프론트엔드는 Expo와 React Native를 사용해서 Android, iOS, Web을 하나의 코드베이스로 관리.
-- React Navigation으로 화면 이동을 구성했고, AuthContext와 AsyncStorage로 로그인 상태와 선택 매장을 유지.
-- Axios interceptor를 사용해 모든 API 요청에 JWT 토큰과 X-Shop-ID를 자동으로 붙여 중복 코드 줄임.
-
-# 모니터링 시스템
- - "macOS LaunchDaemon(.plist) 기반 모니터링 시스템 개발 및 운영"
-
-   
-<img width="400" height="800" alt="image" src="https://github.com/user-attachments/assets/a963c2ea-6fab-4ac5-9b52-2e256e7648d4" />
-
-<매일 18시마다 현재 장비의 상태를 개인 메일로 보고하도록 모니터링 시스템 개발해놔서 장비의 상태를 보고받음>
-<br>
-<br>
-
-<img width="400" height="800" alt="image" src="https://github.com/user-attachments/assets/4616fb56-aef0-43bd-a194-84596dfb3d44" />
-
-<CPU가 80%를 넘으면 시간과 상관없이 바로 보고하도록 시스템을 개발함>
-<br>
-<br>
-<img width="400" height="800" alt="image" src="https://github.com/user-attachments/assets/d17de9c6-63e6-4ebd-ba0f-355bd7eac17a" />
-
-<매일 오전3시가 되면 DB내용을 압축하여 Backblaze로 백업을 함>
-<br>
-<br>
-<br>
-
-
-# 실행 모습
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/ddac8eb2-3a92-4053-b914-f0093e6d51f9" />
-  
-  - 미용 스케줄이 잡힌 모습
-
-
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/709e8f0b-605e-4c1a-9827-232106c95eb4" />
-
-- 고객 추가/삭제/수정을 할 수 있는 고객관리 탭.
-
-
-
-<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-40-12" src="https://github.com/user-attachments/assets/94abf53e-10c9-40c1-aedf-df4c897f323f" />
-<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-38-40 002" src="https://github.com/user-attachments/assets/86db97c4-a920-4245-ba08-e5da2d7a544b" />
-<img width="340" height="800" alt="KakaoTalk_Photo_2026-07-06-13-38-40 001" src="https://github.com/user-attachments/assets/5bc8e10f-ad22-493f-9f4a-c8a70cf1d3fa" />
-
-
--고객관리탭에서 고객에게 버튼 하나로 전화, 문자로 이어지게 하고 강아지의 몸무게 히스토리, 상처 변화를 메모를 DB에 저장하여 한 눈에 보기 편하게 함
-
-
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/9ec0f7a7-0663-45eb-b800-aa77783be7de" />
-
-- 예약을 잡으면 고객에게 알림톡을 보낼 지 말지 여부를 선택할 수 있음. 이뿐만 아니라 리마인드 알림, 동의서, 알림장 등을 고객에게 직접 카카오톡으로 보냄
-
-
-<img width="500" height="800" alt="KakaoTalk_Snapshot_20260706_133200" src="https://github.com/user-attachments/assets/f4396440-9490-40c2-8cbd-ebb94c0ef018" />
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/991b46d0-ca0c-4c10-9ec1-766e41eca277" />
-
-- 실제 고객이 받는 카카오 알림톡. 전자서명까지 가능하도록 구현하여 동의서를 온라인으로 주고받을 수 있도록 설계. 해당 사인은 이미지화하여 backblaze R2 저장소에 남김
-
-
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/d064c226-75b3-4213-97ea-bff349a82d50" />
-
-- DB에 나의 직원들과 나의 매출을 합산하여 가계부를 볼 수 있도록 구현
-
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/67d596ea-88ad-449d-82cf-ad390d440a6f" />
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/ff6328b5-abe2-461e-8e84-46277a0eaa81" />
-
-- 미용이 끝나면 고객에게 알림장을 보내는 기능을 넣음. 고객에게 사진 및 동영상을 첨부해서 보낼 수 있고 고객에겐 카카오톡 알림톡으로 전송됨
-
-
-<img width="340" height="800" alt="image" src="https://github.com/user-attachments/assets/6aaa39c6-1da8-42cc-853e-e9709832b625" />
-
-- 실제 고객이 받아서 보는 알림장의 모습.고객에게 html코드를 보내주어서 디자인을 구현함 
-
-
-
-
-
-
+## 기술 스택
+
+| 구분 | 기술 |
+|---|---|
+| Frontend | React Native, Expo, TypeScript, React Navigation, Axios |
+| Backend | Go, Gin, JWT, REST API |
+| Database | MySQL |
+| Storage / CDN | Backblaze B2, AWS S3 SDK, Cloudflare CDN |
+| External Services | Naver Cloud Platform 알림톡, NICEPAY, Expo Notifications |
+| Infrastructure | Mac mini M4, Cloudflare Tunnel, launchd |
+
+## 담당 범위
+
+- 실제 매장 인터뷰를 통한 요구사항 정의와 기능 우선순위 결정
+- 모바일·웹 UX/UI 설계 및 React Native 구현
+- Go REST API, 인증·권한, MySQL 스키마와 트랜잭션 설계
+- 알림톡, 결제, 푸시, 오브젝트 스토리지 등 외부 서비스 연동
+- 앱스토어·플레이스토어 출시와 서버 배포, 백업, 모니터링 운영
+
+## 링크
+
+- 서비스: [petnoti.com](https://petnoti.com)
+- 사용 설명서: [guide.petnoti.com](https://guide.petnoti.com)
+- iOS: [App Store에서 보기](https://apps.apple.com/kr/app/펫노티/id6780870798)
+- Android: [Google Play에서 보기](https://play.google.com/store/apps/details?id=com.cozyncomfy.petnoti)
